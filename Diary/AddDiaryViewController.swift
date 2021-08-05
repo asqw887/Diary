@@ -8,18 +8,20 @@
 import UIKit
 import MobileCoreServices
 
-class AddDiaryViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate{
+class AddDiaryViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate{
     
     
-
+    // 여러줄을 쓸때는 textView를 써야하는구나..
+    @IBOutlet var diaryTextView: UITextView!
     @IBOutlet var imgView: UIImageView!
-    @IBOutlet var diaryTextField: UITextField!
+//    @IBOutlet var diaryTextField: UITextField!
     @IBOutlet var titleLabel: UILabel!
     
     
     // UIImagePickerController의 인스턴스 변수 생성
     let imagePicker: UIImagePickerController! = UIImagePickerController()
     var fromLibraryImage: UIImage!
+    var todayDate: String! // 날짜를 담을 변수
    
     
     
@@ -32,7 +34,7 @@ class AddDiaryViewController: UIViewController, UINavigationControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        diaryTextField.delegate = self
+        diaryTextView.delegate = self
         
         
         // 현재 날짜 구해서 포맷팅, string 으로 변환후 label에 띄우기
@@ -40,6 +42,7 @@ class AddDiaryViewController: UIViewController, UINavigationControllerDelegate, 
         let dateFormat = DateFormatter()
         dateFormat.dateFormat = "yyyy.MM.dd"
         let convertNowString = dateFormat.string(from: nowTime)
+        todayDate = convertNowString
         
         titleLabel.text = convertNowString+" 일기를 써보자 :)"
         
@@ -104,16 +107,32 @@ class AddDiaryViewController: UIViewController, UINavigationControllerDelegate, 
     // 이미지와 텍스트필드를 전달해주고 이전 뷰로 돌아가야함
     // + date는 그냥 뷰 열릴때 date를 label 로 잡아서 넘겨줄까?,,
     @IBAction func touchUpdateButton(_ sender: UIButton) {
+        // 이미지/내용을 입력했는지 확인
+        if ((diaryTextView.text?.isEmpty == true)){ // textfield가 비어있는지 확인
+            myAlert("앗..!", message: "일기 내용을 입력주세요") // alert 띄워주기
+            
+        }
+        
+        
+        else if (fromLibraryImage == nil){
+          
+            myAlert("앗..!", message: "이미지를 넣어주세요") // alert 띄워주기
+            return
+        }
+        
+        else {
         
         // 리스트에 append
-        diarycontent.append(diaryTextField.text!)
+        diarycontent.append(diaryTextView.text!)
         diaryimages.append(fromLibraryImage)
+        diaryDateList.append(todayDate)
         
         // 썼던 내용을 지워줌
-        diaryTextField.text = ""
+        diaryTextView.text = ""
         
         // 현재 view는 pop
         _ = navigationController?.popViewController(animated: true)
+        }
     }
     
     
@@ -169,11 +188,27 @@ class AddDiaryViewController: UIViewController, UINavigationControllerDelegate, 
     // 텍스트필드 델리게이트
     // 다 입력했고 리턴키 누르면 키보드가 내려갈 수 있도록
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        diaryTextField.resignFirstResponder()
-        return true
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        diaryTextField.resignFirstResponder()
+//        return true
+//    }
+    
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        diaryTextView.resignFirstResponder()
+
     }
+    
+    // 다른 화면을 터치했을 때 키보드가 내려갈 수 있는 메소드
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+         self.view.endEditing(true)
+
+   }
+
+    // return 키 눌렀을때 엔터 쳐지기
     
     
     // todo == 키보드가 올라오면서 화면을 가리는 현상을 해결해야함 ..!
+    
+    
 }
