@@ -7,7 +7,7 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "collectCell"
 
 class AlbumCollectionViewController: UICollectionViewController {
 
@@ -86,3 +86,4 @@ class AlbumCollectionViewController: UICollectionViewController {
     */
 
 }
+

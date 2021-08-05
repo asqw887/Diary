@@ -13,12 +13,12 @@
 		B31CCD3426B7D75A00E8287A /* Diary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B31CCD3226B7D75A00E8287A /* Diary.xcdatamodeld */; };
 		B31CCD3626B7D75C00E8287A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B31CCD3526B7D75C00E8287A /* Assets.xcassets */; };
 		B31CCD3926B7D75C00E8287A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B31CCD3726B7D75C00E8287A /* LaunchScreen.storyboard */; };
-		B31CCD4326B92CD200E8287A /* AlbumCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31CCD4226B92CD200E8287A /* AlbumCollectionViewController.swift */; };
 		B31CCD4526B92E3700E8287A /* DiaryListViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31CCD4426B92E3700E8287A /* DiaryListViewControllerTableViewController.swift */; };
 		B31CCD4926B92FAA00E8287A /* AddDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31CCD4826B92FAA00E8287A /* AddDiaryViewController.swift */; };
 		B31CCD4D26B9301F00E8287A /* DetailDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31CCD4C26B9301F00E8287A /* DetailDiaryViewController.swift */; };
 		B31CCD5026B9616200E8287A /* 너굴맨2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B31CCD4E26B9616100E8287A /* 너굴맨2.jpeg */; };
 		B31CCD5326BAB16100E8287A /* 너굴맨1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B31CCD5226BAB16000E8287A /* 너굴맨1.jpeg */; };
+		B31CCD5526BC041D00E8287A /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31CCD5426BC041D00E8287A /* AlbumViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +30,12 @@
 		B31CCD3526B7D75C00E8287A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B31CCD3826B7D75C00E8287A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B31CCD3A26B7D75C00E8287A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B31CCD4226B92CD200E8287A /* AlbumCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewController.swift; sourceTree = "<group>"; };
 		B31CCD4426B92E3700E8287A /* DiaryListViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		B31CCD4826B92FAA00E8287A /* AddDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaryViewController.swift; sourceTree = "<group>"; };
 		B31CCD4C26B9301F00E8287A /* DetailDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDiaryViewController.swift; sourceTree = "<group>"; };
 		B31CCD4E26B9616100E8287A /* 너굴맨2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "너굴맨2.jpeg"; sourceTree = "<group>"; };
 		B31CCD5226BAB16000E8287A /* 너굴맨1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "너굴맨1.jpeg"; sourceTree = "<group>"; };
+		B31CCD5426BC041D00E8287A /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +74,8 @@
 				B31CCD2B26B7D75A00E8287A /* SceneDelegate.swift */,
 				B31CCD2F26B7D75A00E8287A /* Main.storyboard */,
 				B31CCD4C26B9301F00E8287A /* DetailDiaryViewController.swift */,
-				B31CCD4226B92CD200E8287A /* AlbumCollectionViewController.swift */,
 				B31CCD4426B92E3700E8287A /* DiaryListViewControllerTableViewController.swift */,
+				B31CCD5426BC041D00E8287A /* AlbumViewController.swift */,
 				B31CCD4826B92FAA00E8287A /* AddDiaryViewController.swift */,
 				B31CCD3526B7D75C00E8287A /* Assets.xcassets */,
 				B31CCD3726B7D75C00E8287A /* LaunchScreen.storyboard */,
@@ -157,13 +157,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B31CCD4326B92CD200E8287A /* AlbumCollectionViewController.swift in Sources */,
 				B31CCD2A26B7D75A00E8287A /* AppDelegate.swift in Sources */,
 				B31CCD4526B92E3700E8287A /* DiaryListViewControllerTableViewController.swift in Sources */,
 				B31CCD4D26B9301F00E8287A /* DetailDiaryViewController.swift in Sources */,
 				B31CCD2C26B7D75A00E8287A /* SceneDelegate.swift in Sources */,
 				B31CCD4926B92FAA00E8287A /* AddDiaryViewController.swift in Sources */,
 				B31CCD3426B7D75A00E8287A /* Diary.xcdatamodeld in Sources */,
+				B31CCD5526BC041D00E8287A /* AlbumViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

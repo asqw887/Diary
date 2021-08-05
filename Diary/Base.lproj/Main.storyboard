@@ -10,41 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Album-->
-        <scene sceneID="lri-ij-iaL">
-            <objects>
-                <collectionViewController id="1yM-iY-Dkj" customClass="AlbumCollectionViewController" customModule="Diary" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4VN-UU-x0I">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tqp-8z-ZzT">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UJt-Dn-cpV">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zip-ZU-RFc">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="1yM-iY-Dkj" id="QLv-4J-95N"/>
-                            <outlet property="delegate" destination="1yM-iY-Dkj" id="TUG-9D-Rry"/>
-                        </connections>
-                    </collectionView>
-                    <tabBarItem key="tabBarItem" title="Album" image="square.grid.2x2.fill" catalog="system" selectedImage="square.grid.2x2.fill" id="Aax-kY-o7U"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7bq-jR-m5c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="538" y="320"/>
-        </scene>
         <!--Detail Diary View Controller-->
         <scene sceneID="ajc-Iu-g4s">
             <objects>
@@ -221,12 +186,89 @@
                     </tabBar>
                     <connections>
                         <segue destination="PnR-uh-cQ7" kind="relationship" relationship="viewControllers" id="Sh9-3Z-MqP"/>
-                        <segue destination="1yM-iY-Dkj" kind="relationship" relationship="viewControllers" id="s2r-F9-AlT"/>
+                        <segue destination="vaM-0j-ZE4" kind="relationship" relationship="viewControllers" id="XGR-vK-NB7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kkk-Co-5Yd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-352" y="-67"/>
+        </scene>
+        <!--Album-->
+        <scene sceneID="eM5-OE-gZG">
+            <objects>
+                <viewController id="vaM-0j-ZE4" customClass="AlbumViewController" customModule="Diary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LtB-rr-Po1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dt6-db-7xC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SFc-02-nJK">
+                                    <size key="itemSize" width="180" height="230"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumCell" id="2bQ-uk-fus" customClass="AlbumCell" customModule="Diary" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="230"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="b8s-tQ-Tz7">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="230"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hHF-mQ-Xpi">
+                                                    <rect key="frame" x="0.0" y="8" width="180" height="184"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="hHF-mQ-Xpi" secondAttribute="height" multiplier="1:1" id="kxx-W5-84Z"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20XX.XX.XX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xur-H4-WOH">
+                                                    <rect key="frame" x="42" y="200" width="96" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Xur-H4-WOH" firstAttribute="top" secondItem="hHF-mQ-Xpi" secondAttribute="bottom" constant="20" id="HGr-xc-6Th"/>
+                                                <constraint firstItem="hHF-mQ-Xpi" firstAttribute="top" secondItem="b8s-tQ-Tz7" secondAttribute="top" id="NSY-gh-XBP"/>
+                                                <constraint firstItem="hHF-mQ-Xpi" firstAttribute="leading" secondItem="b8s-tQ-Tz7" secondAttribute="leading" id="Zly-8z-uFw"/>
+                                                <constraint firstAttribute="trailing" secondItem="hHF-mQ-Xpi" secondAttribute="trailing" id="oHd-qG-Oa8"/>
+                                                <constraint firstItem="Xur-H4-WOH" firstAttribute="centerX" secondItem="b8s-tQ-Tz7" secondAttribute="centerX" id="wbX-om-EAN"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="180" height="230"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="Xur-H4-WOH" id="CcT-LF-ufu"/>
+                                            <outlet property="imgView" destination="hHF-mQ-Xpi" id="hjJ-J0-AMI"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="vaM-0j-ZE4" id="wYc-Vo-iva"/>
+                                    <outlet property="delegate" destination="vaM-0j-ZE4" id="ddC-Va-QQg"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0IA-5z-Kq5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0IA-5z-Kq5" firstAttribute="trailing" secondItem="dt6-db-7xC" secondAttribute="trailing" id="N9Y-Tn-Yc8"/>
+                            <constraint firstItem="dt6-db-7xC" firstAttribute="top" secondItem="0IA-5z-Kq5" secondAttribute="top" id="VuC-GI-ctT"/>
+                            <constraint firstItem="0IA-5z-Kq5" firstAttribute="bottom" secondItem="dt6-db-7xC" secondAttribute="bottom" id="pBQ-zW-BYw"/>
+                            <constraint firstItem="dt6-db-7xC" firstAttribute="leading" secondItem="0IA-5z-Kq5" secondAttribute="leading" id="xfp-Y7-6Hl"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Album" image="square.grid.2x2.fill" catalog="system" id="Meh-qB-6q7"/>
+                    <connections>
+                        <outlet property="collectionView" destination="dt6-db-7xC" id="cag-cS-rFc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bAB-k1-jbP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="537.68115942028987" y="442.66304347826093"/>
         </scene>
         <!--List-->
         <scene sceneID="0QA-hR-thn">
