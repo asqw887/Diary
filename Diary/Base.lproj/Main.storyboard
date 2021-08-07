@@ -136,7 +136,7 @@
                                     <action selector="touchUpdateButton:" destination="nS1-9V-SjV" eventType="touchUpInside" id="oTz-IL-LZ5"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="여기에 작성해주세여 " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zJ9-Dk-RL5">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zJ9-Dk-RL5">
                                 <rect key="frame" x="50" y="317" width="314" height="221"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
