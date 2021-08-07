@@ -70,17 +70,24 @@ class DiaryListViewControllerTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
+    // 셀 내용 삭제
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            
+            // 선택한 셀을 삭제
+            diarycontent.remove(at: (indexPath as NSIndexPath).row)
+            diaryimages.remove(at: (indexPath as NSIndexPath).row)
+            diaryDateList.remove(at: (indexPath as NSIndexPath).row)
+            
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
