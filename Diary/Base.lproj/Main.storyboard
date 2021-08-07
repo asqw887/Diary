@@ -19,14 +19,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uA2-pM-7oe">
-                                <rect key="frame" x="0.0" y="74" width="414" height="350"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="350"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="350" id="8Eo-1U-p4X"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxt-oG-Nqk">
-                                <rect key="frame" x="50" y="454" width="314" height="20.333333333333314"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxt-oG-Nqk">
+                                <rect key="frame" x="50" y="474" width="314" height="19"/>
+                                <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7c-oi-Kfg">
+                                <rect key="frame" x="322" y="68" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,19 +40,22 @@
                         <viewLayoutGuide key="safeArea" id="mtK-TP-9nN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="uA2-pM-7oe" firstAttribute="top" secondItem="E7c-oi-Kfg" secondAttribute="bottom" constant="5" id="5JM-RF-JQc"/>
                             <constraint firstItem="Hxt-oG-Nqk" firstAttribute="top" secondItem="uA2-pM-7oe" secondAttribute="top" constant="380" id="E1q-vG-nZG"/>
                             <constraint firstItem="uA2-pM-7oe" firstAttribute="leading" secondItem="mtK-TP-9nN" secondAttribute="leading" id="MCN-Tu-Ur7"/>
                             <constraint firstItem="uA2-pM-7oe" firstAttribute="trailing" secondItem="mtK-TP-9nN" secondAttribute="trailing" id="MqM-XL-gp5"/>
-                            <constraint firstItem="uA2-pM-7oe" firstAttribute="top" secondItem="mtK-TP-9nN" secondAttribute="top" constant="30" id="Rmy-7B-Ppw"/>
+                            <constraint firstItem="uA2-pM-7oe" firstAttribute="top" secondItem="mtK-TP-9nN" secondAttribute="top" constant="50" id="Rmy-7B-Ppw"/>
                             <constraint firstItem="mtK-TP-9nN" firstAttribute="trailing" secondItem="Hxt-oG-Nqk" secondAttribute="trailing" constant="50" id="RvW-OL-dpF"/>
                             <constraint firstItem="uA2-pM-7oe" firstAttribute="centerX" secondItem="mtK-TP-9nN" secondAttribute="centerX" id="S2A-UZ-7og"/>
                             <constraint firstItem="Hxt-oG-Nqk" firstAttribute="centerX" secondItem="mtK-TP-9nN" secondAttribute="centerX" id="eks-ek-KPj"/>
                             <constraint firstItem="Hxt-oG-Nqk" firstAttribute="leading" secondItem="mtK-TP-9nN" secondAttribute="leading" constant="50" id="p4i-yU-y11"/>
+                            <constraint firstItem="mtK-TP-9nN" firstAttribute="trailing" secondItem="E7c-oi-Kfg" secondAttribute="trailing" constant="50" id="ugF-NU-yS5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pdS-gw-btD"/>
                     <connections>
                         <outlet property="DailyContentLabel" destination="Hxt-oG-Nqk" id="9rO-O7-P22"/>
+                        <outlet property="dateLabel" destination="E7c-oi-Kfg" id="OKk-Gq-CHl"/>
                         <outlet property="imgView" destination="uA2-pM-7oe" id="dig-Ej-LM2"/>
                     </connections>
                 </viewController>
@@ -301,9 +309,6 @@
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

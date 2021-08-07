@@ -128,6 +128,7 @@ class DiaryListViewControllerTableViewController: UITableViewController {
             let detailView = segue.destination as! DetailDiaryViewController
             detailView.receiveItem(diarycontent[(indexPath! as NSIndexPath).row])
             detailView.receiveImage(diaryimages[(indexPath! as NSIndexPath).row])
+            detailView.receiveDate(diaryDateList[(indexPath! as NSIndexPath).row])
             
         }
         

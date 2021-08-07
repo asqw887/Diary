@@ -12,7 +12,9 @@ class DetailDiaryViewController: UIViewController {
     
     var receiveContent = ""
     var receiveImage = UIImage()
+    var receiveDate = ""
     
+    @IBOutlet var dateLabel: UILabel!
     @IBOutlet var imgView: UIImageView!
     @IBOutlet var DailyContentLabel: UILabel!
     
@@ -22,10 +24,13 @@ class DetailDiaryViewController: UIViewController {
         
         DailyContentLabel.text = receiveContent
         imgView.image = receiveImage
+        dateLabel.text = receiveDate
         
 
         // Do any additional setup after loading the view.
     }
+    
+    
     
     
     func receiveItem(_ item: String){
@@ -34,6 +39,10 @@ class DetailDiaryViewController: UIViewController {
     
     func receiveImage(_ item: UIImage){
         receiveImage = item
+    }
+    
+    func receiveDate(_ item: String){
+        receiveDate = item
     }
     
 
