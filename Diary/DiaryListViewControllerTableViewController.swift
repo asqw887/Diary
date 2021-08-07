@@ -7,17 +7,6 @@
 
 import UIKit
 
-//var diaryimages = ["너굴맨.jpeg","너굴맨2.jpeg"]
-var diarycontent = ["happy day....","study... "]
-
-
-var diaryimages: [UIImage] = [
-    UIImage(named: "너굴맨1.jpeg")!,
-    UIImage(named: "너굴맨2.jpeg")!
-]
-
-// 날짜 리스트
-var diaryDateList = ["2021.07.31","2021.08.01"]
 
 
 class DiaryListViewControllerTableViewController: UITableViewController {
@@ -65,6 +54,7 @@ class DiaryListViewControllerTableViewController: UITableViewController {
         // 일단 보여줄게 없으니까 content 꺼내주고 date로 바꾸자
         cell.textLabel?.text = diaryDateList[(indexPath as NSIndexPath).row]
         cell.imageView?.image = diaryimages[(indexPath as NSIndexPath).row]
+        
 
     
 
