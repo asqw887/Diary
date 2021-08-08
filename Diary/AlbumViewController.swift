@@ -30,7 +30,7 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
     //UICollectionViewDataSource
     // 몇개를 보여줄지
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return diarycontent.count
+        return diarys.count
     }
     
     
@@ -43,8 +43,10 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
             return UICollectionViewCell()
         }
     
-        cell.dateLabel?.text = diaryDateList[(indexPath as NSIndexPath).row]
-        cell.imgView?.image = diaryimages[(indexPath as NSIndexPath).row]
+//        cell.dateLabel?.text = diaryDateList[(indexPath as IndexPath).row]
+//        cell.imgView?.image = diaryimages[indexPath.row]
+        cell.dateLabel.text = diarys[indexPath.row].diaryDate
+        cell.imgView.image = diarys[indexPath.row].diaryImages
         return cell
         
         

@@ -41,7 +41,7 @@ class DiaryListViewControllerTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         
         // diarycontent 리스트 갯수만큼 tablecell 보여주기 ^-^
-        return diarycontent.count
+        return diarys.count
     }
 
     
@@ -52,8 +52,10 @@ class DiaryListViewControllerTableViewController: UITableViewController {
         
         
         // 일단 보여줄게 없으니까 content 꺼내주고 date로 바꾸자
-        cell.textLabel?.text = diaryDateList[(indexPath as NSIndexPath).row]
-        cell.imageView?.image = diaryimages[(indexPath as NSIndexPath).row]
+//        cell.textLabel?.text = diaryDateList[(indexPath as NSIndexPath).row]
+//        cell.imageView?.image = diaryimages[(indexPath as NSIndexPath).row]
+        cell.textLabel?.text = diarys[indexPath.row].diaryDate
+        cell.imageView?.image = diarys[indexPath.row].diaryImages
         
 
     
@@ -78,9 +80,11 @@ class DiaryListViewControllerTableViewController: UITableViewController {
             // Delete the row from the data source
             
             // 선택한 셀을 삭제
-            diarycontent.remove(at: (indexPath as NSIndexPath).row)
-            diaryimages.remove(at: (indexPath as NSIndexPath).row)
-            diaryDateList.remove(at: (indexPath as NSIndexPath).row)
+//            diarycontent.remove(at: (indexPath as NSIndexPath).row)
+//            diaryimages.remove(at: (indexPath as NSIndexPath).row)
+//            diaryDateList.remove(at: (indexPath as NSIndexPath).row)
+            
+            diarys.remove(at: indexPath.row)
             
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
@@ -123,12 +127,16 @@ class DiaryListViewControllerTableViewController: UITableViewController {
             let cell = sender as! UITableViewCell
             let indexPath = self.diaryTableView.indexPath(for: cell)
             let detailView = segue.destination as! DetailDiaryViewController
-            detailView.receiveItem(diarycontent[(indexPath! as NSIndexPath).row])
-            detailView.receiveImage(diaryimages[(indexPath! as NSIndexPath).row])
-            detailView.receiveDate(diaryDateList[(indexPath! as NSIndexPath).row])
+//            detailView.receiveItem(diarycontent[(indexPath! as NSIndexPath).row])
+//            detailView.receiveImage(diaryimages[(indexPath! as NSIndexPath).row])
+//            detailView.receiveDate(diaryDateList[(indexPath! as NSIndexPath).row])
+            
+            detailView.receiveItem(diarys[indexPath!.row].diaryContent!)
+            detailView.receiveImage(diarys[indexPath!.row].diaryImages!)
+            detailView.receiveDate(diarys[indexPath!.row].diaryDate!)
             
         }
-        
+    
     }
 }
 

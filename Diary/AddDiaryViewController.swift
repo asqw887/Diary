@@ -123,9 +123,10 @@ class AddDiaryViewController: UIViewController, UINavigationControllerDelegate, 
         else {
         
         // 리스트에 append
-        diarycontent.append(diaryTextView.text!)
-        diaryimages.append(fromLibraryImage)
-        diaryDateList.append(todayDate)
+            diarys.append(Diary(diaryContent: diaryTextView.text!, diaryImages: fromLibraryImage, diaryDate: todayDate))
+//        diarycontent.append(diaryTextView.text!)
+//        diaryimages.append(fromLibraryImage)
+//        diaryDateList.append(todayDate)
         
         // 썼던 내용을 지워줌
         diaryTextView.text = ""

@@ -7,47 +7,26 @@
 
 import UIKit
 
-
-var diarycontent = ["happy day....",
-                    "study... ",
-                    "work hard...",
-                    "trip 1 day...",
-                    "trip 2 day...",
-                    "trip 3 day...",
-                    "trip 4 day...",
-                    "trip 5 day...",
-                    "trip 6 day...",
-                    "trip 7 day...",
-                    "trip 8 day..."
-                  
-]
+// Model
+struct Diary {
+    var diaryContent: String?
+    var diaryImages: UIImage?
+    var diaryDate: String?
+}
 
 
-var diaryimages: [UIImage] = [
-    UIImage(named: "너굴맨1.jpeg")!,
-    UIImage(named: "너굴맨2.jpeg")!,
-    UIImage(named: "1.jpg")!,
-    UIImage(named: "2.jpg")!,
-    UIImage(named: "3.jpg")!,
-    UIImage(named: "4.jpg")!,
-    UIImage(named: "5.jpg")!,
-    UIImage(named: "6.jpg")!,
-    UIImage(named: "7.jpg")!,
-    UIImage(named: "8.jpg")!,
-    UIImage(named: "9.jpg")!
-]
-
-// 날짜 리스트
-var diaryDateList = ["2019.05.31",
-                     "2021.06.01",
-                     "2021.06.03",
-                     "2021.06.04",
-                     "2021.06.05",
-                     "2021.06.07",
-                     "2021.06.10",
-                     "2021.07.02",
-                     "2021.08.01",
-                     "2021.08.02",
-                     "2021.08.03"
+// 모델로 mvc패턴 구현해서 만들기 
+var diarys:[Diary] = [
+    Diary(diaryContent: "happy day....", diaryImages: UIImage(named: "너굴맨1.jpeg"), diaryDate: "2019.05.31"),
+    Diary(diaryContent: "study... ", diaryImages: UIImage(named: "너굴맨2.jpeg"), diaryDate: "2019.06.01"),
+    Diary(diaryContent: "trip 1 day...", diaryImages: UIImage(named: "1.jpg"), diaryDate: "2019.06.02"),
+    Diary(diaryContent: "trip 2 day...", diaryImages: UIImage(named: "2.jpg"), diaryDate: "2019.06.03"),
+    Diary(diaryContent: "trip 3 day...", diaryImages: UIImage(named: "3.jpg"), diaryDate: "2019.06.05"),
+    Diary(diaryContent: "trip 4 day...", diaryImages: UIImage(named: "4.jpg"), diaryDate: "2019.06.31"),
+    Diary(diaryContent: "trip 5 day...", diaryImages: UIImage(named: "5.jpg"), diaryDate: "2019.07.10"),
+    Diary(diaryContent: "trip 6 day...", diaryImages: UIImage(named: "6.jpg"), diaryDate: "2019.07.12"),
+    Diary(diaryContent: "trip 7 day...", diaryImages: UIImage(named: "7.jpg"), diaryDate: "2019.07.13"),
+    Diary(diaryContent: "trip 8 day...", diaryImages: UIImage(named: "8.jpg"), diaryDate: "2019.07.14"),
+    Diary(diaryContent: "trip 9 day...", diaryImages: UIImage(named: "9.jpg"), diaryDate: "2019.07.15")
 ]
 
